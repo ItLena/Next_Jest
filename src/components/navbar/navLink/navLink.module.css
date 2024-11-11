@@ -1,0 +1,14 @@
+.active{
+    background-color: var(--primary);   
+}
+.container{
+    color: var(--text);
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 20px;    
+}
+.container:hover{
+    background-color: var(--secondary);
+    color: var(--textDark);
+}
