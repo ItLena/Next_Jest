@@ -1,3 +1,4 @@
+
 .links{
     display: flex;
     gap: 1rem;
@@ -5,11 +6,36 @@
     align-items: center;
 }
 .logout{
-    background-color: var(--secondary);
+    background-color: var(--grey);
     border-radius: 20px;
     padding: 0.5rem;
     border: none;    
-    color: var(--text);
-    font-size: 1.2rem;
+    color: var(--black);
+    font-size: 1rem;  
+}
+.dropBox, .menu {
+    display: none;  
+}
+
+@media (max-width: 768px){
+    .links{
+        display: none;
+    }
+    .menu{
+        display: block;
+        cursor: pointer;
+    }
+    .dropBox{
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 180px;
+        padding: 1rem;
+        background-color: var(--black);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        height: calc(100vh-60px);    
+    }    
 }
 

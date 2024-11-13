@@ -1,53 +1,66 @@
+"use client"
+import { useState } from "react";
 import NavLink from "../navLink/NavLink";
 import styles from './links.module.css'
 
-const Links = () =>{
-    const session = true;
+const links = [
+    {
+        title: 'Home',
+        path: '/'
+    },
+    {
+        title: 'About',
+        path: '/about'
+    },
+    {
+        title: 'Contact',
+        path: '/contact'
+    },
+    {
+        title: 'Houses',
+        path: '/houses'
+    },
+    {
+        title: 'Books',
+        path: '/books'
+    },
+    {
+        title: 'Blog',
+        path: '/blog'
+    },
+]
+const Links = () => {
+    const session = false;
     const isAdmin = false;
+    const [open, setOpen] = useState(false)
 
-    const links = [
-        {
-            title: 'Home',
-            path: '/'
-        },
-        {
-            title: 'About',
-            path: '/about'
-        },
-        {
-            title: 'Contact',
-            path: '/contact'
-        },
-        {
-            title: 'Houses',
-            path: '/'
-        },
-        {
-            title: 'Books',
-            path: '/'
-        },
-        {
-            title: 'Blog',
-            path: '/blog'
-        },
-    ]
-    return(
-        <div className={styles.links}>
-          {links.map((link, index)=>(
-            <NavLink className={styles.link} key={index} item={link}></NavLink>
-          ))}
-        {session ? (
-                <div>
-                {isAdmin && 
-                    <NavLink item={{title: 'Admin', path: '/admin'}}/>
+
+    return (
+        <div>
+            <div className={styles.links}>
+                {links.map((link, index) => (
+                    <NavLink className={styles.link} key={index} item={link} />
+                ))}
+                {session ? (
+                    <div>
+                        {isAdmin &&
+                            <NavLink item={{ title: 'Admin', path: '/admin' }} />
+                        }
+                        <button className={styles.logout}>Logout</button>
+                    </div>
+                ) : (
+                    <NavLink item={{ title: 'Login', path: '/login' }} />
+                )
                 }
-                <button className={styles.logout}>Logout</button>
+            </div>
+            <button className={styles.menu} onClick={() => setOpen((prev) => !prev)}>Menu</button>
+            {
+                open && <div className={styles.dropBox}>
+                    {links.map((link, index) => (
+                        <NavLink className={styles.link} key={index} item={link} />
+                    ))}
                 </div>
-            ):(
-                <NavLink item={{title: 'Login', path: '/login'}}/>
-            )
-        }
-        
+            }
         </div>
     )
 }

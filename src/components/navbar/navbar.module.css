@@ -1,10 +1,11 @@
 .container{
-    background-color: var(--bgsoft);
+    background-color: var(--black);
     width: 100%;    
     margin: 0;
+    height: 60px;
     position: fixed;
     padding: 0.5rem;
-    color: var(--textDark);
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: space-between; 
