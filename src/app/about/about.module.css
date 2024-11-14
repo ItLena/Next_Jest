@@ -1,44 +1,40 @@
-.container{
-    margin-top: 3rem;
+.container{   
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     background-color: var(--black);
-    padding: 1rem;
-    flex-wrap: wrap;
-    width: 80%;
-    max-width: 800px;
-    overflow-y: scroll;    
+    padding: 15% 2rem 2rem;     
+    width: 80%;    
+    max-width: 800px;    
+    margin-top: 80px;
+    height: 95%;
+    overflow-y:auto
+   
 }
-
-.container::-webkit-scrollbar {
-    width: 12px;
-}
-
-.container::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-.container::-webkit-scrollbar-thumb {
-    background: #888;
-}
-
-.container::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-/* .scroll-container::-webkit-scrollbar-button {
-    display: none;
-} */
 .row{
     display: flex;
     gap: 2rem;
+    border-bottom: var(--white) 1px dashed;
+    padding-bottom: 1rem;
 }
 .imgBox{
-
+    flex:1;
+width: fit-content;
+height: fit-content;
 }
 .textBox{
-
+flex:1
+}
+.textBox h4{
+    margin-bottom: 1rem;
+}
+.textBox p{
+    color: var(--grey);
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+.textBox button{
+    padding: 0.5rem
 }

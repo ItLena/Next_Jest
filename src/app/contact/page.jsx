@@ -1,11 +1,13 @@
 import styles from './contact.module.css'
+
 import owl from '../../../public/images/owl.webp'
 import Image from 'next/image'
 
 const ContactPage = () => {
-    return (
+    return (      
         <div className={styles.container}>
             <div className={styles.imgBox}>
+                <h1>Contact oss</h1>
                 <Image
                     className={styles.img}
                     src={owl}
@@ -21,7 +23,7 @@ const ContactPage = () => {
                     <button>Send</button>
                 </form>
             </div>
-        </div>
+        </div>        
     )
 }
 export default ContactPage
