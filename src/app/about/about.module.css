@@ -5,13 +5,10 @@
     justify-content: center;
     gap: 2rem;
     background-color: var(--black);
-    padding: 15% 2rem 2rem;     
+    padding: 3rem 2rem 2rem;     
     width: 80%;    
-    max-width: 800px;    
-    margin-top: 80px;
-    height: 95%;
-    overflow-y:auto
-   
+    max-width: 800px; 
+    margin-top: 5rem;
 }
 .row{
     display: flex;
