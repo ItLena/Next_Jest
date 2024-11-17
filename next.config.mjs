@@ -5,7 +5,11 @@ const nextConfig = {
         {
             protocol: 'https', 
             hostname: 'www.wizardingworld.com'
-        }
+        },
+        {
+            protocol: 'https', 
+            hostname: 'ik.imagekit.io'
+        },
     ]
    }
 };

@@ -1,6 +1,7 @@
 
 import styles from './bookCard.module.css'
 import Image from 'next/image'
+
 const BookCard = ({ book }) => {
     return (
         <div className={styles.card}>
@@ -10,7 +11,7 @@ const BookCard = ({ book }) => {
                 <li><h5>{book.pages} pages</h5></li>
                 </span>
                 <li>
-                    <Image
+                    <Image                        
                         src={book.cover}
                         width={200}
                         height={100}

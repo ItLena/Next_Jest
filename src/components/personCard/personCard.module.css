@@ -1,0 +1,22 @@
+.card{
+    width: 230px;  
+  
+}
+.card li{
+    list-style: none;
+}
+.card p{
+    font-size: 0.7rem;
+    color: var(--grey);
+    padding-bottom: 0.7rem;
+    
+}
+.span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+.img{
+    height:80px ;
+}

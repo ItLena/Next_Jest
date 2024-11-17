@@ -1,6 +1,7 @@
 
 import styles from '../page.module.css'
 import BookCard from '../../../src/components/bookCard/BookCard'
+import Link from 'next/link'
 
 
 const BooksPage = async () => {
