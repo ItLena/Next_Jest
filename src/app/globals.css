@@ -45,3 +45,24 @@ span{
   gap: 2rem
 }
 
+table{
+  width: 80%;
+  border: none;
+}
+th, td{
+border: 1px solid var(--grey);
+padding: 0.5rem
+}
+th{
+  padding: 0.5rem;  
+  text-align: left;
+  background-color: var(--primary);  
+}
+tr:nth-child(even){
+  background-color: var(--secondary);
+  color: var(--black)
+}
+tr:hover {
+  background-color: var(--primary);
+  color: var(--grey);
+}

@@ -1,18 +1,13 @@
-import styles from '../../page.module.css'
-import PersonCard from  "../../../components/personCard/PersonCard";
 
-const TeachersPage = async () =>{
+import styles from '../../page.module.css'
+import Link from 'next/link';
+const StaffsPage = async () =>{
 
 let data = await fetch('https://hp-api.onrender.com/api/characters/staff')
 let staffs = await data.json();
-staffs.sort((a,b) =>{
 
-    return a.name - b.name
-});
 
-console.log(staffs)
-    return (
-     
+    return (     
         <div className={styles.page}>
             <h1>Hogwarts Staffs</h1>
          <table> 
@@ -24,20 +19,16 @@ console.log(staffs)
              </tr>
               </thead> 
               <tbody>                
-                {staffs.map((item, index) => (
-                    // <PersonCard key={item.id} staff={item} />
-                    <tr> 
-                       
+                {staffs.map((item, index) => ( 
+                     <tr key={index}>
                         <td>{index+1}</td>
-                        <td>{item.name}</td>
+                        <td> <Link href={`/about/staffs/${encodeURIComponent(item.id)}`}>{item.name}</Link></td>
                         <td>
                             {item.wizard ? "wizard" : "not wizzard"}
-                            
-                            
-                        </td>
-                   </tr>))
-                }
-               
+                        </td> 
+                   </tr>
+                  ))
+                } 
                      </tbody>
             </table>
                
@@ -45,4 +36,4 @@ console.log(staffs)
            
     )
 }
-export default TeachersPage;
+export default StaffsPage;

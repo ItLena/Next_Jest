@@ -46,7 +46,7 @@ const AboutPage = () => {
                     <div className={styles.textBox}>
                         <h4>The Headmaster of Hogwarts is professor Albus Dumbledore</h4>
                         <p>He is assisted by a team of competent teachers and the best wizards in the country</p>
-                        <button><Link href='/about/teachers' prefetch={false}>Hogwarts staff</Link></button>
+                        <button><Link href='/about/staffs' prefetch={false}>Hogwarts staff</Link></button>
                     </div>
                     <div className={styles.imgBox}>
                         <Image
