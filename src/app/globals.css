@@ -26,7 +26,7 @@ main{
   display: flex;  
   justify-content: center;
   align-items: center;
-  padding: 2rem; 
+  padding: 60px 0 2rem 0; 
   font-family: var(--font-geist-sans);
 }
 
@@ -65,4 +65,15 @@ tr:nth-child(even){
 tr:hover {
   background-color: var(--primary);
   color: var(--grey);
+}
+button{
+  background-color: var(--primary);
+  padding: 10%;
+  border-radius: 5%;
+  border: none;
+  color: var(--white);
+  font-weight: bolder;
+}
+button:hover{ 
+box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px #00000000;
 }

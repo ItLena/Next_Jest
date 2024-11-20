@@ -1,22 +1,15 @@
 .card{
-    width: 230px;  
-  
+  width: 60%;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.card li{
-    list-style: none;
+
+.card h1, .card p{
+    color: var(--grey)
 }
-.card p{
-    font-size: 0.7rem;
-    color: var(--grey);
-    padding-bottom: 0.7rem;
-    
-}
-.span{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 1rem;
-}
+
 .img{
     height:80px ;
 }
