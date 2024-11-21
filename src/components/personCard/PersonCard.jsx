@@ -10,7 +10,7 @@ const PersonCard = ({ person }) => {
                 <h3>{person.species}</h3>
                 <p>{person.gender}</p>               
         
-            <div>
+            <div className={styles.image}>
                 {person.image === "" ? 
                 <Image
                 src={noPhoto}

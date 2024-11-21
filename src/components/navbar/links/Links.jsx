@@ -23,11 +23,8 @@ const links = [
     {
         title: 'Books',
         path: '/books'
-    },
-    {
-        title: 'Blog',
-        path: '/blog'
-    },
+    }
+   
 ]
 const Links = () => {
     const session = false;

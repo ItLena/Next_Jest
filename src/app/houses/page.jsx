@@ -1,14 +1,13 @@
 import styles from './houses.module.css'
 import Image from 'next/image'
 import hogwart from '../../../public/images/hogwart.gif'
-
 import Link from 'next/link'
 
 const HousesPage = () => {
     const houses =
         [
             {
-                "name": "Gryffindor",
+                "name": "gryffindor",
                 "foundedBy": "Godric Gryffindor",
                 "values": "Bravery, chivalry, and daring.",
                 "strengths": "Courageous, determined, chivalrous",
@@ -16,7 +15,7 @@ const HousesPage = () => {
                 "image": require('../../../public/images/gryffindore.avif')
             },
             {
-                "name": "Hufflepuff",
+                "name": "hufflepuff",
                 "foundedBy": "Helga Hufflepuff",
                 "values": "Hard work, patience, justice, and loyalty.",
                 "strengths": "Hard work, patience, justice, and loyalty",
@@ -24,7 +23,7 @@ const HousesPage = () => {
                 "image": require('../../../public/images/hufflepuff.avif')
             },
             {
-                "name": "Slytherin",
+                "name": "slytherin",
                 "foundedBy": "Salazar Slytherin",
                 "values": "Ambition, cunning, leadership, and resourcefulness.",
                 "strengths": "Ambitious, cunning, resourceful, determined.",
@@ -32,7 +31,7 @@ const HousesPage = () => {
                 "image": require('../../../public/images/slytherin.avif')
             },
             {
-                "name": "Ravenclaw",
+                "name": "ravenclaw",
                 "foundedBy": "Rowena Ravenclaw",
                 "values": "Intelligence, wisdom, wit, and creativity.",
                 "strengths": "Intelligent, wise, creative, witty.",
@@ -57,30 +56,34 @@ const HousesPage = () => {
                 alt=''
                 layout="responsive"
             />
-            <h1>Our houses</h1>
+            <h1>Houses</h1>
             {
                 houses.map((house, index) => (
                     <div className={styles.cardBox} key={index}>
                         <div className={styles.card}>
-                            <Image
-                                src={house.image}
-                                width={100}
-                                height={50}
-                                alt=''
-                                layout="responsive"
-                            />
-                            <ul>
+                            <div className={styles.imgBox}>
+                                <Link href={`/houses/${encodeURIComponent(house.name)}`}>
+                                    <Image
+                                        src={house.image}
+                                        width={200}
+                                        height={100}
+                                        alt=''
+                                        layout="responsive"
+                                    />
+                                </Link>
+                            </div>
+                            <ul className={styles.listBox}>
                                 <li> Founded by: {house.foundedBy}</li>
                                 <li> Values: {house.values}</li>
                                 <li>Strengths: {house.strengths}</li>
                                 <li>Benefits: {house.benefits}</li>
+                                <Link href={`/houses/${encodeURIComponent(house.name)}`}><button>Click learn more</button></Link>
                             </ul>
-                            <Link href='/houses/slug'> <button>{house.name}</button></Link>
                         </div>
                     </div>)
                 )
             }
- </div>
+        </div>
     )
 }
 export default HousesPage

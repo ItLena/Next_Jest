@@ -1,6 +1,6 @@
 .background{
   width: 80%; 
-  max-width: 798px;
+  max-width: 1560px;
   background-color: var(--black);
   margin: auto;
   margin-top: 3rem; 
@@ -25,19 +25,38 @@
     color: var(--grey);
 }
 
-.cardBox{   
+.cardBox{  
+    width: 90%; 
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-   
-    gap: 5rem;
+    justify-content: center; 
+    
     margin: auto;
-    justify-content: center;
-    align-items: center;  
-    padding: 3rem;
+   
+}
+.imgBox{
+    flex:1;
+
+}
+.listBox{
+    flex: 1; 
+    font-size: 0.8rem;
+    color: var(--grey)
+}
+.listBox button{
+    background-color: var(--primary);
+    font-size: 0.7rem;
+    padding: 0.3rem;
+    margin: 0.5rem;    
 }
 .card{
-    
-    width: 40%;
+    max-width: 700px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 1rem;
 }

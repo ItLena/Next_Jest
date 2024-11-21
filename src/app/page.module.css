@@ -18,7 +18,29 @@
   align-items: center;
   margin: 2rem;
 }
+.box{ 
+    max-width: 786px;
+    width: 90%;
+    margin: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background-color: var(--black);
+    padding: 1rem;
+    height: fit-content;
+}
+.gallery {  
+  border: 1px solid var(--white);
+  float: left;
+  width: 180px;
+  height: 300px;
+}
 
+.desc {
+  padding: 0.5rem;
+  text-align: center;
+}
 /* 
 @media (max-width:1536px){
   .page{
