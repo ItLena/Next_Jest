@@ -1,29 +1,48 @@
-import styles from './contact.module.css'
+"use client"
 
+import styles from './contact.module.css'
 import owl from '../../../public/images/owl.webp'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
+import { useState } from 'react'
 
 const ContactPage = () => {
-    return (      
+    const[userName, setUserName] = useState();
+
+    
+    return (
         <div className={styles.container}>
             <div className={styles.imgBox}>
-                <h1>Contact oss</h1>
+                <h1>Contact us</h1>
                 <Image
-                    className={styles.img}
+                    width={300}
+                    height={200}
                     src={owl}
-                    alt='hogwart'
+                    alt=''
                     layout="responsive"
                 />
             </div>
             <div className={styles.formBox}>
-                <form action="" className={styles.form}>
-                    <input type="text" placeholder='Enter your name and surname' />
-                    <input type="text" placeholder='Email' />
-                    <textarea name="" id="" cols={30} rows={10} placeholder='Message' />
-                    <button>Send</button>
+                <form className={styles.form}>                 
+                    <input                    
+                        type="text"
+                        name="userName" 
+                        value="user123"                       
+                        id="userName"
+                        placeholder='Enter your name' />
+                    <input
+                        type="text"
+                        name="email"                        
+                        id="email"
+                        placeholder='Email' />
+                    <textarea
+                        name="message"
+                        id="message"
+                        cols={30} rows={10}
+                        placeholder='Message' />
+                    <button type='submit'>Send</button>
                 </form>
             </div>
-        </div>        
+        </div>
     )
 }
 export default ContactPage

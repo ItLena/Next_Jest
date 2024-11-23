@@ -20,6 +20,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover; 
   background-attachment: fixed;
+  overflow:auto
 }
 
 main{
@@ -28,6 +29,7 @@ main{
   align-items: center;
   padding: 60px 0 2rem 0; 
   font-family: var(--font-geist-sans);
+ 
 }
 
 * {
@@ -89,8 +91,7 @@ form{
   gap: 1rem;
   width: 100%;
 }
-form input,
-form textarea {
+input, textarea {
 padding: 0.5rem;
 border-radius: 5px;
 border: none;
@@ -98,4 +99,11 @@ outline: none;
 background-color: var(--grey);
 color: var(--black);
 width: 100%;
+}
+
+p{
+  font-size: 0.8rem;
+  color: var(--grey);
+  padding: 0.5rem;
+  text-align: justify; 
 }

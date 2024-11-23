@@ -9,15 +9,19 @@
     flex-wrap: wrap;
     width: 80%;
     max-width: 800px;  
-    height: fit-content;   
+    height: fit-content; 
+    position: sticky;  
 }
 .imgBox{
  flex:1; 
  position: relative;
+
 }
-.img{
-  object-fit: contain;  
+
+.imgBox h1{
+  margin-bottom: 2rem;
 }
+
 .formBox{
  flex:1;
 

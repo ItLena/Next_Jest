@@ -25,8 +25,7 @@ const StaffsPage = async () => {
                             <td>
                                 {item.wizard ? "wizard" : "not wizzard"}
                             </td>
-                        </tr>
-                    ))
+                        </tr>))
                     }
                 </tbody>
             </table>

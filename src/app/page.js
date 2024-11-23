@@ -42,7 +42,7 @@ export default function Home() {
                 height={100}
                 alt='hogwart'
                 layout="responsive" />
-              <div className={styles.desc}>{item.desc}</div>
+              <p>{item.desc}</p>
             </div>
           ))
         }

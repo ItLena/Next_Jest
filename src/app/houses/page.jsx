@@ -1,5 +1,5 @@
 import styles from './houses.module.css'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import hogwart from '../../../public/images/hogwart.gif'
 import Link from 'next/link'
 

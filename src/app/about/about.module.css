@@ -1,37 +1,46 @@
-.container{   
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     background-color: var(--black);
-    padding: 3rem 2rem 2rem;     
-    width: 80%;    
-    max-width: 800px; 
+    padding: 3rem 2rem 2rem;
+    width: 80%;
+    max-width: 800px;
     margin-top: 5rem;
 }
-.row{
+
+.row {
     display: flex;
-    gap: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1%;
+    max-width: 700;
     border-bottom: var(--white) 1px dashed;
     padding-bottom: 1rem;
 }
-.imgBox{
+
+.imgBox {
+    max-width: 300px;
     flex:1;
-width: fit-content;
-height: fit-content;
 }
-.textBox{
-flex:1
+
+.textBox {
+    max-width: 300px;
+    flex:1;
 }
-.textBox h4{
+
+.textBox h4 {
     margin-bottom: 1rem;
 }
-.textBox p{
+
+.textBox p {
     color: var(--grey);
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
 }
-.textBox button{
+
+.textBox button {
     padding: 0.5rem
 }
