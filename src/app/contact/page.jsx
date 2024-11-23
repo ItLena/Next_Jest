@@ -25,8 +25,7 @@ const ContactPage = () => {
                 <form className={styles.form}>                 
                     <input                    
                         type="text"
-                        name="userName" 
-                        value="user123"                       
+                        name="userName"                                              
                         id="userName"
                         placeholder='Enter your name' />
                     <input

@@ -31,8 +31,7 @@ describe("render Contact page", () => {
     });
        
     it("should update the input value on change", async ()=>{
-        const input = screen.getByPlaceholderText(/Enter your name/i)
-        
+        const input = screen.getByPlaceholderText(/Enter your name/i)        
         await userEvent.type(input, 'user123');
         expect(input.value).toBe('user123')
     });
