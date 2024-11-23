@@ -35,19 +35,3 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-Instal Jest
-npm install jest 
-
-Add to package.json
-"scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-     "test": "jest"
-  }
-
-  Add to .eclintrc.json
-  {
-  "extends": ["next/babel", "next/core-web-vitals"]
-  }
